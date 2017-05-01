@@ -59,6 +59,20 @@ public class UsandoRemoveIf {
 
         usuarioList3.removeIf(usuario -> usuario.getPontos() > 160);
         usuarioList3.forEach(u -> System.out.println(u));
+        
+        // Outra possibilidade com o Method Reference
+        //usuarioList3.forEach(System.out::println);
+        
+        
+
+        //======== AGORA USANDO STREAM DIRETO NA COLLECTION==========//
+        List<Usuario> usuarioList4 = new ArrayList<>();
+        usuarioList4.add(user1);
+        usuarioList4.add(user2);
+        usuarioList4.add(user3);
+        usuarioList4.stream()
+        	.filter(user -> user.getPontos() <= 160)
+        	.forEach(System.out::println);
 
     }
 }
