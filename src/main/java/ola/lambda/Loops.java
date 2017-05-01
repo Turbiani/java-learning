@@ -33,5 +33,10 @@ public class Loops {
         //UTILIZANDO LAMBDA (ME LEMBRA MUITO ARROW FUNCTIONS DO JS)
         System.out.println("UTILIZANDO LAMBDA=====//");
         usuarioList.forEach(user -> System.out.println(user.getNome()));
+        
+
+        //UTILIZANDO METHOD REFERENCE
+        System.out.println("UTILIZANDO METHOD REFERENCE=====//");
+        usuarioList.forEach(Usuario::printNome);
     }
 }

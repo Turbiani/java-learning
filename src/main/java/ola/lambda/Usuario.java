@@ -36,4 +36,8 @@ class Usuario {
     public void setModerador(boolean moderador) {
         this.moderador = moderador;
     }
+    
+    public void printNome(){
+    	System.out.println(getNome());
+    }
 }
