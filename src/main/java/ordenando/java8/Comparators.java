@@ -28,5 +28,16 @@ public class Comparators {
         //COMPARATOR COM LAMBDA
         Collections.sort(usuarioList, (u1, u2) -> new Integer(u1.getPontos()).compareTo(u2.getPontos()));
         usuarioList.forEach(user -> System.out.println(user.getNome()));
+
+        //USANDO O DEFAULT METHOD EM List QUE INVOCA O Collections.sort
+        usuarioList.sort((u1, u2) -> String.CASE_INSENSITIVE_ORDER.compare(u1.getNome(), u2.getNome()));
+        usuarioList.forEach(user -> System.out.println(user.getNome()));
+
+        //AGORA TUDO ISSO COM STREAM
+        usuarioList.stream()
+            .sorted((u1, u2) -> String.CASE_INSENSITIVE_ORDER.compare(u1.getNome(), u2.getNome()))
+            .forEach(System.out::println);
+
+        //USANDO 
     }
 }
