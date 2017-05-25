@@ -28,5 +28,9 @@ public class Main {
         //ACESSANDO ATRIBUTO DA CLASSE USUARIO ATRAVÉS DE METHOD REFERENCE
         usuarioList.forEach(Usuario::whoAmi);
 
+        //TAMBEM PODEMOS REFERNECIAR METODOS QUE PRECISAM DE PARAMETROS  - SEÇÃO 6.5 DO LIVRO
+        //O COMPILADOR VAI INFERIR QUE CADA Usuario ITERADO NO forEach DEVE SER PASSADO COMO ARG PARA println
+        usuarioList.forEach(System.out::println);
+
     }
 }
