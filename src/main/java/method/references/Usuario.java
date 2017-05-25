@@ -8,9 +8,32 @@ class Usuario {
     private int pontos;
     private boolean moderador;
 
+    /**
+     * Default Constructor
+     */
+    public Usuario(){};
+
+    /**
+     * @param nome do usuario
+     * @param pontos do usuario
+     */
     public Usuario(String nome, int pontos) {
         this.nome = nome;
         this.pontos = pontos;
+    }
+
+    /**
+     * @param pontos do usuario
+     */
+    public Usuario(int pontos) {
+        this.pontos = pontos;
+    }
+
+    /**
+     * @param nome do usuario
+     */
+    public Usuario(String nome) {
+        this.nome = nome;
     }
 
     public String getNome() {
@@ -38,7 +61,7 @@ class Usuario {
     }
     
     public void whoAmi(){
-    	System.out.println(getNome());
+    	System.out.println(getNome()==null ? getPontos() : getNome());
     }
 
     @Override
