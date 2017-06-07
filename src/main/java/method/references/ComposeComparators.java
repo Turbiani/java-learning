@@ -9,7 +9,7 @@ import static java.util.Comparator.comparing;
 /**
  * Created by lcunha on 25/05/17.
  */
-public class ComposeComaprators {
+public class ComposeComparators {
     public static void main(String[] args) {
         Usuario user1 = new Usuario("Paulo Silveira", 150);
         Usuario user2 = new Usuario("Rodrigo Turini", 120);
