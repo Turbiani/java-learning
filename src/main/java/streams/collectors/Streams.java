@@ -9,7 +9,7 @@ import static java.util.Comparator.comparing;
 /**
  * Created by lcunha on 25/05/17.
  */
-public class Main {
+public class Streams {
     public static void main(String[] args) {
         Usuario user1 = new Usuario("Paulo Silveira", 150);
         Usuario user2 = new Usuario("Rodrigo Turini", 120);
@@ -23,7 +23,7 @@ public class Main {
         Stream<Usuario> soOsFodoes = usuarioList.stream().filter(user -> user.getPontos() > 150);
 
         //O filter da API de Stream funciona da mesma maneira do filter do JavaScript
-        //Não altera a lista original, e sim cria uma nova (Mas Stream não é uma collection !)
+        //Não altera a lista original, e sim cria uma nova (Mas Stream não é uma collection ! É quase um iterator)
         //Para realizar outras operações, deve invocar o stream() em cima da lista original novamente
         //AGORA EXIBO A LISTA CRIADA A PARTIR DO FILTRO EM usuarioList
 
